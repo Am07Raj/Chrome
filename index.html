@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom Start Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+        }
+        .search-box {
+            margin: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .quick-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .quick-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .quick-links a:hover {
+            background-color: #0056b3;
+        }
+        a {
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Custom Start Page</h1>
+    
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Google...">
+        <button onclick="searchGoogle()">Search</button>
+    </div>
+
+    <div class="quick-links">
+        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+        <a href="https://mail.google.com/" target="_blank">Gmail</a>
+        <a href="https://drive.google.com/" target="_blank">Google Drive</a>
+        <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+
+    <a href="https://github.com/" target="_blank">Visit My GitHub</a>
+
+    <script>
+        function searchGoogle() {
+            const query = document.getElementById("search").value;
+            if (query) {
+                window.location.href = `https://www.google.com/search?q=${query}`;
+            }
+        }
+    </script>
+</body>
+</html>
